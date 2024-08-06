@@ -43,7 +43,7 @@ public class IntroArray {
         Scanner scan = new Scanner(System.in);
         //*ลูปผ่านทุกตำแหน่งของอาร์เรย์ temp, อ่านค่าจากผู้ใช้และเก็บในอาร์เรย์ temp. */
         for (int i = 0; i < temp.length; i++) {
-            System.out.print("Temp "+(i+1)+" = ");
+            System.out.print("Temp "+(i+2)+" = ");
             temp[i] = scan.nextFloat();
             //*เพิ่มค่าที่อ่านได้เข้าไปในตัวแปร sum. */
             sum = sum + temp[i];

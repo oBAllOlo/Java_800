@@ -13,20 +13,22 @@ public class ForEachArray {
         }
 
         //* Print number array using traditional for loop
-        System.out.println("Number array:");
+        System.out.print("Number array: ");
         for (int i = 0; i < number.length; i++) { //* ลูปผ่านแต่ละตำแหน่งของอาร์เรย์ number
-            System.out.println(number[i]); //* แสดงค่าของแต่ละตำแหน่ง
+            System.out.print(number[i] + " "); //* แสดงค่าของแต่ละตำแหน่ง
         }
+        System.out.println("");
+
 
         //* Print number array using for-each loop
-        System.out.println("Number array (for-each loop):");
+        System.out.print("Number array (for-each loop): ");
         for (int n : number) { //* ลูปผ่านแต่ละค่าในอาร์เรย์ number โดยใช้ for-each loop
             System.out.print(n + ", "); //* แสดงค่าของแต่ละตำแหน่ง
         }
         System.out.println(); //* ขึ้นบรรทัดใหม่
 
         //* Print score array using for-each loop
-        System.out.println("Score array:");
+        System.out.print("Score array: ");
         for (double s : score) { //* ลูปผ่านแต่ละค่าในอาร์เรย์ score โดยใช้ for-each loop
             System.out.print(s + ", "); //* แสดงค่าของแต่ละตำแหน่ง
         }

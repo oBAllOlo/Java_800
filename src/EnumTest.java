@@ -45,8 +45,6 @@ public class EnumTest {
 
         //* แสดงผลลัพธ์เกรดและข้อความที่กำหนด
         System.out.println("Your grade is " + yg + " = " + msg);
-        
-        scan.close(); //* ปิดออบเจกต์ Scanner
 
         //* แสดงค่าของ enum Colors
         for (Colors color : Colors.values()){

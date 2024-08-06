@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 
 public class ArrayMethod {
     public static void main(String[] args) {

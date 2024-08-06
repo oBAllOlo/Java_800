@@ -7,6 +7,7 @@ public class TestScanner {
         System.out.print("Input your name: ");
         String name = sc.nextLine();
 
+        
         System.out.print("Input your age: ");
         int age = sc.nextInt();
 
