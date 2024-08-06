@@ -12,7 +12,5 @@ public class TestModifier {
         System.out.println("Old Salary = "+obj2.getSalary());
         obj2.setSalary2(35000.0f);
         System.out.println("New old Salary = "+obj2.getSalary());
-
-
     }
 }

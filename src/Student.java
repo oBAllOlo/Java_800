@@ -5,9 +5,5 @@ public class Student{
     public void setData(){
     name = "Java";
     age = 20;
-    System.out.println(name+" "+age);
-
-} 
-
-    
+    }
 }

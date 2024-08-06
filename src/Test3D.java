@@ -2,30 +2,32 @@ import java.util.Scanner;
 
 public class Test3D {
     public static void main(String[] args) {
-        int [][][]room;
-        room_info roomdata = new room_info();
-        room = roomdata.inputdata();
-        roomdata.checkdata(room);
-        roomdata.showdata();
+        int[][][] room; // ประกาศอาร์เรย์สามมิติ
+        RoomInfo roomData = new RoomInfo(); // สร้างออบเจกต์ RoomInfo
+        room = roomData.inputData(); // รับข้อมูลจากผู้ใช้
+        roomData.checkData(room); // คำนวณข้อมูลที่ต้องการ
+        roomData.showData(); // แสดงผลลัพธ์
     }
 }
 
-class room_info{
-    public int block,row,column,total_man,total_avail;
+class RoomInfo {
+    private int block, row, column; // ขนาดของอาร์เรย์สามมิติ
+    private int totalMan, totalAvail; // รวมจำนวนนักศึกษาและห้องว่าง
 
-    public int get_total(int[][][]rm, int t){
+    // คำนวณจำนวนคนหรือห้องว่างในอาร์เรย์สามมิติ
+    public int getTotal(int[][][] rm, int t) {
         int count = 0;
         for (int i = 0; i < block; i++) {
-            for (int j = 0; j < row; j++){
+            for (int j = 0; j < row; j++) {
                 for (int k = 0; k < column; k++) {
                     switch (t) {
-                        case 0:
-                            if(rm[i][j][k] == 0)
-                            count++;
+                        case 0: // ตรวจหาห้องว่าง
+                            if (rm[i][j][k] == 0)
+                                count++;
                             break;
-                        case 1:
-                            if(rm[i][j][k] != 0)
-                            count = count + rm[i][j][k];
+                        case 1: // คำนวณจำนวนคน
+                            if (rm[i][j][k] != 0)
+                                count += rm[i][j][k];
                             break;
                     }
                 }
@@ -33,34 +35,40 @@ class room_info{
         }
         return count;
     }
-    public int[][][] inputdata(){
-        int[][][]rm;
+
+    // รับข้อมูลจากผู้ใช้
+    public int[][][] inputData() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Input total Building --> ");
-        block = scan.nextInt();
+        block = scan.nextInt(); // จำนวนตึก
         System.out.print("Input total Floor --> ");
-        row = scan.nextInt();
+        row = scan.nextInt(); // จำนวนชั้น
         System.out.print("Input total Room --> ");
-        column = scan.nextInt();
-        rm = new int[block][row][column];
-        for(int i = 0; i < block; i++){
+        column = scan.nextInt(); // จำนวนห้อง
+
+        int[][][] rm = new int[block][row][column]; // สร้างอาร์เรย์สามมิติ
+
+        // รับข้อมูลจำนวนคนในแต่ละห้อง
+        for (int i = 0; i < block; i++) {
             for (int j = 0; j < row; j++) {
                 for (int k = 0; k < column; k++) {
-                    System.out.print("Input people in building "+(i+1)+" Floor "+(j+1)+" Room "+(k+1)+" --> ");
-                    rm[i][j][k] = scan.nextInt();
+                    System.out.print("Input people in building " + (i + 1) + " Floor " + (j + 1) + " Room " + (k + 1) + " --> ");
+                    rm[i][j][k] = scan.nextInt(); // รับค่าจำนวนคน
                 }
             }
         }
-        return rm;
+        return rm; // ส่งคืนอาร์เรย์สามมิติ
     }
 
-    public void checkdata(int[][][] rm) {
-        total_man = get_total(rm, 1);
-        total_avail = get_total(rm, 0);
+    // คำนวณข้อมูลรวมจำนวนคนและห้องว่าง
+    public void checkData(int[][][] rm) {
+        totalMan = getTotal(rm, 1); // คำนวณจำนวนคนทั้งหมด
+        totalAvail = getTotal(rm, 0); // คำนวณจำนวนห้องว่าง
     }
 
-    public void showdata(){
-        System.out.println("Total People = "+total_man);
-        System.out.println("Total Available Room = "+total_avail);
+    // แสดงผลลัพธ์
+    public void showData() {
+        System.out.println("Total People = " + totalMan); // แสดงจำนวนคนทั้งหมด
+        System.out.println("Total Available Room = " + totalAvail); // แสดงจำนวนห้องว่าง
     }
 }

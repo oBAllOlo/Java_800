@@ -8,7 +8,7 @@ public class TestPrivate {
         return salary2;
     }
 
-    //รับค่าเข้าตัวแปล s
+    //Method รับค่าเข้าตัวแปล s
     public float setSalary2(float s){
         return salary2 = s;
     }
