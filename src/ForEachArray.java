@@ -53,3 +53,19 @@ public class ForEachArray {
         }
     }
 }
+/*
+ผลลัพธ์ของการทำงานทั้งหมดของโปรแกรมนี้
+
+Number array: 2 6 7 8 9 
+Number array (for-each loop): 2, 6, 7, 8, 9, 
+Score array: 18.5, 40.25, 30.75, 
+ArrayList (traditional for loop):
+Hello
+Java
+World
+ArrayList (for-each loop):
+Hello
+Java
+World
+
+*/

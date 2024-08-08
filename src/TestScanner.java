@@ -16,3 +16,13 @@ public class TestScanner {
 
     }
 }
+
+/*
+ผลลัพธ์ของการทำงานทั้งหมดของโปรแกรมนี้
+
+Input your name: BAll
+Input your age: 22
+My name is BAll
+I am 22 years old
+
+*/

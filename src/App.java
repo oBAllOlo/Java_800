@@ -6,3 +6,11 @@ public class App {
         System.out.println(std.age);
     }
 }
+
+/*
+ผลลัพธ์ของการทำงานทั้งหมดของโปรแกรมนี้
+
+Hello, World!
+BAll
+22
+*/

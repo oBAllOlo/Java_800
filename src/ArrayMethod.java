@@ -37,3 +37,17 @@ public class ArrayMethod {
         System.out.println("num1 == num2 >> "+Arrays.equals(num1, num2)); //* ตรวจสอบความเท่ากันของ num1 และ num2 หลังจากเติมค่าใหม่
     }
 }
+
+/*
+ผลลัพธ์ของการทำงานทั้งหมดของโปรแกรมนี้
+
+Number of num1 = 7
+num2 >> 8,10,15,22,27,33,45,
+num1 >> 8,10,15,22,27,33,45,
+Found 15 in index 2
+Not Found 99 >> -8
+num1 == num2 >> true
+1,1,1,1,1,1,1,
+num1 == num2 >> false
+
+*/

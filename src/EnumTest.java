@@ -52,3 +52,15 @@ public class EnumTest {
         }
     }
 }
+
+/*
+ผลลัพธ์ของการทำงานทั้งหมดของโปรแกรมนี้
+
+Grade Levels are: G  S  U 
+Enter your grade:g
+Your grade is g = Good
+Red
+Green
+Blue
+
+*/
